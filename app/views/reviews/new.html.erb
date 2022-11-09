@@ -1,0 +1,6 @@
+<div class="d-flex justify-content-between p-3">
+  <div></div>
+  <h1> Add a review </h1>
+  <%= link_to "List of restaurants", restaurants_path, class: "btn btn-secondary btn-opacity-25 p-3" %>
+</div>
+<%= render "form_review", review: @review, restaurant: @restaurant %>

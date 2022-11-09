@@ -1,0 +1,18 @@
+
+<h1 class="text-center m-3 p-3">Restaurants</h1>
+
+<div class="d-flex justify-content-center">
+  <ul class="list-group">
+    <% @restaurants.each do |restaurant| %>
+    <li class="list-group-item bg-secondary p-2 bg-opacity-10">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body bg-light">
+          <h5 class="card-title"><%= link_to restaurant.name, restaurant_path(restaurant), class: "text-decoration-none color primary" %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= restaurant.phone_number %></h6>
+          <p class="card-text"><%= restaurant.address %></p>
+        </div>
+      </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
